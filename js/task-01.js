@@ -1,24 +1,10 @@
-//All categories
 const allLinksEl = categories.querySelectorAll(".item");
 console.log("Number of categories:", allLinksEl.length);
 
-//first element
+allLinksEl.forEach((link) => {
+  const firstEl = link.firstElementChild.textContent;
+  const navEl = link.firstElementChild.nextElementSibling.children.length;
 
-const firstEl = categories.firstElementChild;
-console.log("Category:", firstEl.firstElementChild.textContent);
-const navLastEl = firstEl.lastElementChild;
-console.log("Elements:", navLastEl.children.length);
-
-// second element
-
-const secondEl = categories.firstElementChild.nextElementSibling;
-console.log("Category:", secondEl.firstElementChild.textContent);
-const navMidEl = secondEl.lastElementChild;
-console.log("Elements:", navMidEl.children.length);
-
-//third element
-
-const lastEl = categories.lastElementChild;
-console.log("Category:", lastEl.firstElementChild.textContent);
-const navFinalLastEl = lastEl.lastElementChild;
-console.log("Elements:", navFinalLastEl.children.length);
+  console.log("Category:", firstEl);
+  console.log("Elements:", navEl);
+});
