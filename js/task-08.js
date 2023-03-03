@@ -14,6 +14,7 @@ function handleSubmitLogin(event) {
 
   if (emailInputeValue === "" || passwordInputValue === "") {
     alert(`All filds must have data`);
+    return;
   }
   console.log(`Login: ${emailInputeValue}, Password: ${passwordInputValue}`);
   event.currentTarget.reset();
